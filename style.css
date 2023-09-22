@@ -1,12 +1,12 @@
 .container {
   width: 100%;
-  max-width: 450px;
+  max-width: 380px;
   height: 100%;
   max-height: 600px;
   background-color: grey;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
+  padding: 5px;
 }
 
 .botonera {
@@ -18,13 +18,14 @@
 }
 
 .tablero {
-  width: 420px;
+  width: 360px;
   background-color: red;
   margin: 0 auto;
   padding: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(0, 1fr); /* Filas con altura igual y mínima */
+  grid-auto-rows: minmax(0, 1fr);
+  /* Filas con altura igual y mínima */
   gap: 10px;
 }
 
@@ -32,11 +33,12 @@
   background-color: black;
   color: white;
   border: solid 2px #0F0F0F;
-  font-size: 3vw;
+  font-size: 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1 / 1; /* Hace que los elementos sean cuadrados */
+  aspect-ratio: 1 / 1;
+  /* Hace que los elementos sean cuadrados */
 }
 
 .boton {
@@ -51,4 +53,26 @@
 .empty-box {
   background-color: #0F0F0F;
   color: #0F0F0F;
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 719px) {
+  .container {
+    max-width: 420px;
+  }
+
+  .tablero {
+    width: 400px;
+  }
+}
+
+
+@media screen and (min-width: 720px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .tablero {
+    width: 680px;
+  }
 }
